@@ -1,14 +1,14 @@
 
-public class Yatzhee
+public class Yahtzee
 {
     Die6 die1;
     Die6 die2;
     Die6 die3;
     Die6 die4;
     Die6 die5;
-    String toString;
-    String summarize;
-    public Yatzhee()
+    private String toString;
+    private String summarize;
+    public Yahtzee()
     {
        die1 = new Die6();
        die2 = new Die6();
@@ -26,11 +26,23 @@ public class Yatzhee
     }
     public void roll(int dieNumber)
     {
-        
+        if (dieNumber == 1) {
+            die1.roll();
+        } else if (dieNumber == 2) {
+            die2.roll();
+        } else if (dieNumber == 3) {
+            die3.roll();
+        } else if (dieNumber == 4) {
+            die4.roll();
+        } else if (dieNumber == 5) {
+            die5.roll();
+        }
     }
     public String summarize() {
-        summarize = "1-" + die1.getValue() + "; " + "2-" + die2.getValue() + "; " + "3-" + die3.getValue() + "; " + "4-" + die4.getValue() + "; " + "5-" + die5.getValue();
-        return summarize;
+        for (int i = 1; i <= 6; i++) {
+            
+        }
+        return "idk yet lmao";
     }
     public String toString()
     {
