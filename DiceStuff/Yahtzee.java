@@ -28,13 +28,14 @@ public class Yahtzee
     }
     public String summarize() {
         int [] tally = {0, 0, 0, 0, 0, 0};
-        for (int i = 0; i <= rollArray.length; i++) {
+        summarize = "";
+        for (int i = 0; i < rollArray.length; i++) {
             tally[rollArray[i].getValue()-1] += 1;
         }
-        for (int i = 0; i <= tally.length; i++) {
-            summarize += i+"-"+tally[i-1];
-            if (i <= tally.length) {
-                summarize += ";";
+        for (int i = 0; i < tally.length; i++) {
+            summarize += (i+1)+"-"+tally[i];
+            if (i < tally.length-1) {
+                summarize += "; ";
             }
         }
         return summarize;
